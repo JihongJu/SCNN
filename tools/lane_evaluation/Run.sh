@@ -1,7 +1,6 @@
-root=../../
-data_dir=${root}data/CULane/
-exp=vgg_SCNN_DULR_w9
-detect_dir=${root}tools/prob2lines/output/${exp}/
+detect_dir=${1%/}/
+data_dir=${2%/}/
+output_file=$3
 w_lane=30;
 iou=0.5;  # Set iou to 0.3 or 0.5
 im_w=1640
@@ -34,4 +33,4 @@ out8=./output/out8_night.txt
 ./evaluate -a $data_dir -d $detect_dir -i $data_dir -l $list6 -w $w_lane -t $iou -c $im_w -r $im_h -f $frame -o $out6
 ./evaluate -a $data_dir -d $detect_dir -i $data_dir -l $list7 -w $w_lane -t $iou -c $im_w -r $im_h -f $frame -o $out7
 ./evaluate -a $data_dir -d $detect_dir -i $data_dir -l $list8 -w $w_lane -t $iou -c $im_w -r $im_h -f $frame -o $out8
-cat ./output/out*.txt>./output/${exp}_iou${iou}_split.txt
+cat ./output/out*.txt>$output_file
