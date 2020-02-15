@@ -1,0 +1,6 @@
+file: ./output/out3_shadow.txt
+tp: 2876 fp: 0 fn: 0
+precision: 1
+recall: 1
+Fmeasure: 1
+

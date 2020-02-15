@@ -1,0 +1,6 @@
+file: ./output/out8_night.txt
+tp: 21030 fp: 0 fn: 0
+precision: 1
+recall: 1
+Fmeasure: 1
+

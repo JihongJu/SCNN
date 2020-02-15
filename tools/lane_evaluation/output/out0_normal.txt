@@ -1,0 +1,6 @@
+file: ./output/out0_normal.txt
+tp: 32777 fp: 0 fn: 0
+precision: 1
+recall: 1
+Fmeasure: 1
+
